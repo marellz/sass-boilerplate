@@ -51,4 +51,23 @@
   height: $y;
 }
 
+@mixin hide-input {
+  @include r(0px);
+  @include hidden;
+  position: absolute;
+  z-index: -100;
+}
+
+@mixin min($px) {
+  @media screen and(min-width: $px) {
+    @content;
+  }
+}
+@mixin max($px: 768px) {
+  @media screen and(max-width: $px) {
+    @content;
+  }
+}
+
+
 // Add more
