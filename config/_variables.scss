@@ -1,2 +1,38 @@
-@import 'fonts';
-@import 'colors';
+@import "fonts";
+@import "colors";
+
+$spacings: 12;
+$spacing-width: 8px;
+$spacers: (
+  0: 0,
+  1: 8px,
+  2: 16px,
+  3: 24px,
+  4: 32px,
+  5: 40px,
+  6: 48px,
+  7: 56px,
+  8: 64px,
+  9: 72px,
+  10: 80px,
+);
+
+$font-weights: (
+  "light": 300,
+  "normal": 400,
+  "semibold": 500,
+  "bold": 700,
+  "black": 900,
+);
+
+$font-sizes: (
+  "2xs": 10px,
+  "xs": 12px,
+  "s": 14px,
+  "base": 16px,
+  "l": 20px,
+  "xl": 24px,
+  "2xl": 32px,
+  "3xl": 56px,
+  "4xl": 80px,
+);

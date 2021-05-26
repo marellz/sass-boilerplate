@@ -63,11 +63,41 @@
     @content;
   }
 }
+
 @mixin max($px: 768px) {
   @media screen and(max-width: $px) {
     @content;
   }
 }
 
+@mixin center-img($fit: cover) {
+  object-fit: $fit;
+  object-position: center;
+}
+
+@mixin pseudo-before {
+  &::before {
+    content: "";
+    display: block;
+
+    @content;
+  }
+}
+
+@mixin pseudo-after {
+  &::after {
+    content: "";
+    display: block;
+
+    @content;
+  }
+}
+
+@mixin inset {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
 
 // Add more

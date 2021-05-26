@@ -1,0 +1,15 @@
+@each $weight, $weight_value in $font-weights {
+  .font-#{$weight} {
+    font-weight: $weight_value !important;
+  }
+}
+
+@each $size, $size_value in $font-sizes {
+  .font-#{$size} {
+    font-size: $size_value !important;
+  }
+  
+  .line-height-#{$size}{
+    line-height: $size_value !important;
+  }
+}
