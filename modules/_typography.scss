@@ -8,8 +8,24 @@
   .font-#{$size} {
     font-size: $size_value !important;
   }
-  
-  .line-height-#{$size}{
-    line-height: $size_value !important;
+}
+
+@each $bp, $bp_value in $grid-breakpoints {
+  @include min($bp_value) {
+    @each $weight, $weight_value in $font-sizes {
+      .font-#{$bp}-#{$weight} {
+        font-size: $weight_value !important;
+      }
+    }
+  }
+}
+
+*[class^="max-lines"] {
+  @include line-clamp-general;
+}
+
+@for $line from 1 to 4 {
+  .max-lines-#{$line} {
+    @include line-clamp($line);
   }
 }
