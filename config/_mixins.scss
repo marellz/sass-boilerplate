@@ -12,13 +12,13 @@
   &::placeholder {
     @content;
   }
-  &:-moz-placeholder {
-    @content;
-  }
   &::-moz-placeholder {
     @content;
   }
   &::-webkit-input-placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
     @content;
   }
   &:-ms-input-placeholder {
@@ -52,8 +52,9 @@
 }
 
 @mixin hide-input {
-  @include r(0px);
+  @include r(0);
   @include hidden;
+  
   position: absolute;
   z-index: -100;
 }
